@@ -6,5 +6,5 @@ st.write('This ML-based app is developed for educational purposes. Objective of 
          ' You can see the details of approach, data set, and feature set if you click on _"See The Details"_. ')
 
 with st.echo('approach'):
-st.subheader('Data set')
+
    
