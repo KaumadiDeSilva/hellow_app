@@ -25,7 +25,7 @@ st.write('Data set was created in October 2022.')
 
 # ----- FOR THE PIE CHART ----- #
 # Calculate phishing and legitimate rates
-phishing_rate = ml.calculate_phishing_rate()  # You should define this function
+phishing_rate = ml.calculate_phishing_rate(int(ml.phishing_df.shape[0] / (ml.phishing_df.shape[0] + ml.legitimate_df.shape[0]) * 100))  # You should define this function
 legitimate_rate = 100 - phishing_rate
 
 labels = 'Phishing', 'Legitimate'
