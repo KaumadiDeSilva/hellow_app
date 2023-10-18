@@ -21,3 +21,16 @@ st.subheader('Data set')
 st.write('I used _"phishtank.org"_ & _"tranco-list.eu"_ as data sources.')
 st.write('Totally 26584 websites ==> **_16060_ legitimate** websites | **_10524_ phishing** websites')
 st.write('Data set was created in October 2022.')
+
+# ----- FOR THE PIE CHART ----- #
+labels = 'phishing', 'legitimate'
+phishing_rate = int(ml.phishing_df.shape[0] / (ml.phishing_df.shape[0] + ml.legitimate_df.shape[0]) * 100)
+legitimate_rate = 100 - phishing_rate
+sizes = [phishing_rate, legitimate_rate]
+explode = (0.1, 0)
+fig, ax = plt.subplots()
+ax.pie(sizes, explode=explode, labels=labels, shadow=True, startangle=90, autopct='%1.1f%%')
+ax.axis('equal')
+st.pyplot(fig)
+ # ----- !!!!! ----- #
+
