@@ -1,4 +1,5 @@
 import streamlit as st
+import machine_learning as ml
 
 st.title('Phishing Website Detection using Machine Learning')
 st.write('This ML-based app is developed for educational purposes. The objective of the app is to detect phishing websites using only content data, not the URL.'
